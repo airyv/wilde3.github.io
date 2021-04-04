@@ -2181,7 +2181,12 @@ p > code {
     }
     .mist .site-title i {
       background: #FFFFFFcc;
-    }.box-shadow-wrapper {
+    }blockquote {
+  color: #e43434;
+  margin: 0;
+  padding: 0 15px;
+  border-left: 4px solid #c5c5c5;
+}.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
       cursor: url('/media/curs/default_normal.cur'), default;
