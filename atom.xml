@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://wilde3.github.io</id>
+    <title>wilde的博客</title>
+    <updated>2021-04-04T05:04:30.133Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://wilde3.github.io"/>
+    <link rel="self" href="https://wilde3.github.io/atom.xml"/>
+    <subtitle>wilde的博客</subtitle>
+    <logo>https://wilde3.github.io/images/avatar.png</logo>
+    <icon>https://wilde3.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2021, wilde的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[Spring01基础知识]]></title>
+        <id>https://wilde3.github.io/post/Spring/</id>
+        <link href="https://wilde3.github.io/post/Spring/">
+        </link>
+        <updated>2021-04-04T04:37:48.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="1-spring框架的引言">1. Spring框架的引言</h2>
+<p><code>spring</code>(春天),生于在2002年,由<code>Rod Johnson</code>创作。Spring框架是一个集众多设计模式于一身的<code>开源的</code>、<code>轻量级</code>的<code>项目管理</code>框架。致力于JAVAEE轻量级解决方案。相对于原来学过的框架而言,spring框架和之前学习的struts2 、 mybatis 框架有了本质的区别,不是替换原来的某个框架,而是对其进行<code>整合管理</code>。</p>
+<p><code>轻量级解决方案</code>:提供一个以简单的、统一的、高效的方式构造整个应用，并且可以将单层框架以最佳的组合揉和在一起建立一个连贯的体系。</p>
+<hr>
+<h2 id="2spring框架的核心作用">2.Spring框架的核心作用</h2>
+<p>Spring 框架用来<code>管理</code><strong>[创建|使用|销毁]<strong>项目中的组件,由于spring 框架可以帮我们生产项目中组件对象,因此也习惯称spring是一个</strong>工厂|容器</strong>。</p>
+<blockquote>
+<p><strong><code>组件</code>:</strong> 项目中的service,dao,action,都是项目中的组件</p>
+<p><strong><code>注意</code>:</strong> spring框架通常<strong>不管理对实体类对象创建</strong></p>
+</blockquote>
+<hr>
+<h2 id="3第一个环境搭建">3.第一个环境搭建</h2>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/wilde3/Image-Hosting@master/blog-gridea/Spring/1%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png" alt="" loading="lazy"></figure>
+<p>步骤：<br>
+新建一个模块，maven，选择webapp，取名为spring——day1。</p>
+<blockquote>
+<p><code>a. 引入依赖</code></p>
+</blockquote>
+<p>在xml文件中引入依赖</p>
+<pre><code class="language-xml">	&lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+      &lt;version&gt;4.3.2.RELEASE&lt;/version&gt;
+  &lt;/dependency&gt;
+  &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-beans&lt;/artifactId&gt;
+      &lt;version&gt;4.3.2.RELEASE&lt;/version&gt;
+  &lt;/dependency&gt;
+  &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-web&lt;/artifactId&gt;
+      &lt;version&gt;4.3.2.RELEASE&lt;/version&gt;
+  &lt;/dependency&gt;
+  &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-expression&lt;/artifactId&gt;
+      &lt;version&gt;4.3.2.RELEASE&lt;/version&gt;
+  &lt;/dependency&gt;
+  &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-aop&lt;/artifactId&gt;
+      &lt;version&gt;4.3.2.RELEASE&lt;/version&gt;
+  &lt;/dependency&gt;
+  &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+      &lt;version&gt;4.3.2.RELEASE&lt;/version&gt;
+  &lt;/dependency&gt;
+  &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-context-support&lt;/artifactId&gt;
+      &lt;version&gt;4.3.2.RELEASE&lt;/version&gt;
+  &lt;/dependency&gt;
+  &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-aspects&lt;/artifactId&gt;
+      &lt;version&gt;4.3.2.RELEASE&lt;/version&gt;
+  &lt;/dependency&gt;
+  &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-jdbc&lt;/artifactId&gt;
+      &lt;version&gt;4.3.2.RELEASE&lt;/version&gt;
+  &lt;/dependency&gt;
+</code></pre>
+<blockquote>
+<p><code>b. 引入配置文件</code></p>
+</blockquote>
+<pre><code class="language-markdown"># 配置文件名称: 任意名称 
+# 配置文件位置: 项目中根下任意位置
+# 配置文件的内容:
+
+​```java
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+    &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+           xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+           xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd &quot;&gt;
+    &lt;/beans&gt;
+</code></pre>
+<blockquote>
+<p><code>c.创建组件</code></p>
+</blockquote>
+<p>新建directory——java，java目录下新建接口UserDAO.</p>
+<pre><code class="language-java">public interface UserDAO {
+    void save(String name);
+}
+</code></pre>
+<p>新建一个实现类UserDAOImpl实现接口</p>
+<pre><code class="language-java">public class UserDAOImpl implements UserDAO {
+
+    public void save(String name) {
+        System.out.println(&quot;name = &quot; + name);
+    }
+}
+</code></pre>
+<blockquote>
+<p><code>d.工厂管理</code><br>
+在resources目录下也建立一个directory——init，在init目录下新建一个spring配置文件，名为spring.xml</p>
+</blockquote>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;
+
+
+    &lt;!--通过spring管理组件
+      bean:用来管理组件对象的创建
+      class：用来指定管理组件对象的全限定名 包.类
+      id：用来指定spring框架创建的当前组件对象在spring中唯一标识
+      推荐id写成接口的首字母小写 如：userDAO
+    --&gt;
+  	&lt;!--通过bean标签管理组件对象--&gt;
+     &lt;bean class=&quot;init.UserDAOImpl&quot; id=&quot;aa&quot;&gt;&lt;/bean&gt;
+
+&lt;/beans&gt;
+</code></pre>
+<blockquote>
+<p><code>e.启动工厂</code>测试<br>
+在main-java-init目录下建立TestSpring的java文件用于测试。</p>
+</blockquote>
+<pre><code class="language-java"> public class TestSpring {
+    public static void main(String[] args) {
+        //启动工厂
+        ApplicationContext context = new ClassPathXmlApplicationContext(&quot;init/spring.xml&quot;);
+
+        //获取工程中创建好的对象 参数：获取工厂中指定对应的唯一标识
+
+        UserDAO userDAO = (UserDAO) context.getBean(&quot;aa&quot;);
+
+        userDAO.save(&quot;xiaochen&quot;);
+
+    }
+}
+</code></pre>
+<p>若不采用spring，而采用传统方式new对象，则建立的测试为TestUserDAO：</p>
+<pre><code class="language-java">public class TestUserDAO{
+    public static void main(String[] args){
+
+        //创建组件对象
+        UserDAOImpl userDAO = new UserDAOImpl();
+        //使用组件对象
+        userDAO.save(&quot;小陈&quot;)；
+        //销毁jvm
+    }
+}
+</code></pre>
+<hr>
+<h2 id="4spring框架中的核心思想">4.Spring框架中的核心思想</h2>
+<h4 id="41-ioc控制反转">4.1 IOC[控制反转]</h4>
+<ul>
+<li>
+<p><code>IOC**(inversion of controll)控制反转</code></p>
+<pre><code class="language-markdown"># 1.定义
+	将对象的创建由原来(new)的方式转移到配置文件中,交给spring工厂来创建对象
+  将原来手动通过new关键字创建对象的权利交给spring，由spring工厂创建对象过程，当然spring不仅要创建对象还要在创建对象的同时通过DI的方式为组件与组件调用关系
+</code></pre>
+</li>
+<li>
+<p><code>DI(dependcy Injection)依赖注入</code></p>
+<pre><code class="language-markdown"># 1.定义
+	Spring不仅要创建对象,还要建立类与类之间的关系,因此在控制反转的基础上又提出了依赖注入的概念。为组件中成员变量完成赋值过程，这个过程就叫做依赖注入。
+# 2.语法
+  两个步骤：
+  1.组件对象中需要哪个组件|谁 将谁声明为成员变量并提供公开的SET方法
+  2.在spring的配置文件中对应的组件标签内使用property标签去完成属性的赋值操作
+</code></pre>
+</li>
+</ul>
+<p>DI基本语法：</p>
+<p>DAO组件：</p>
+<pre><code class="language-java">    public class DeptDAOImpl implements DeptDAO{
+        @Override
+        public void save(String name){
+            System.out.println(&quot;DAO name:&quot; + name);
+        }
+    }
+</code></pre>
+<p>Service组件：</p>
+<pre><code class="language-java">public class DeptServiceImpl implements DeptService{
+    //需要DAO组件对象 依赖DAO组件
+    private DeptDAO deptDAO；
+    //公开的SET方法
+    public void setDeptDAO(DeptDAO deptDAO){
+        this.deptDAO = deptDAO;
+    }@Override
+    public void save(String name){
+        System.out.println(&quot;deptService name:&quot; + name);
+        deptDAO.save(name);
+    }
+
+}
+</code></pre>
+<p>xml配置文件赋值：</p>
+<!--管理DAO组件-->
+<p><bean class="di.DeptDAOImpl" id="aa"></bean></p>
+<!--管理service组件-->
+<p><bean class="di.DeptServiceImpl" id="deptService"></bean></p>
+<pre><code>&lt;!--依赖的注入
+    property：用来给组件中的属性进行赋值操作
+    name：用来指定给组件中那个属性名进行赋值
+    ref：用来指定赋值对象在工厂中唯一标识 bean的id
+--&gt;
+&lt;property name=&quot;deptDAO&quot; ref=&quot;aa&quot;/&gt;
+</code></pre>
+</bean>
+<p>启动工程测试：<br>
+ApplicationContext context = new ClassPathXmlApplicationContext(&quot;di/spring.xml&quot;);<br>
+//获取service组件<br>
+DeptService deptService = (DeptService) context.getBean(&quot;deptService&quot;);<br>
+deptService.save(&quot;百知教育&quot;)</p>
+<h4 id="42-aop面向切面编程">4.2 AOP[面向切面编程]</h4>
+<p><strong>AOP</strong>( Aspect Oriental Programing ) <strong>面向切面的编程</strong></p>
+<hr>
+<h2 id="5-set方式注入">5. SET方式注入</h2>
+<p>spring中注入方式</p>
+<p>a.SET注入 使用成员变量SET方式为属性完成赋值的过程      重点</p>
+<p>b.构造注入 使用构造方法形式进行属性的赋值      了解</p>
+<p>c.自动注入 就是通过在配置文件中完成类中属性自动赋值     了解</p>
+<h3 id="51-八种基本类型string类型-日期类型的注入">5.1 八种基本类型+String类型 +日期类型的注入</h3>
+<blockquote>
+<p><code>基本类型注入</code></p>
+</blockquote>
+<pre><code class="language-xml">&lt;property name=&quot;name&quot; value=&quot;zhagnsan&quot;/&gt;
+&lt;property name=&quot;age&quot; value=&quot;21&quot;/&gt;
+&lt;property name=&quot;id&quot; value=&quot;100063&quot;/&gt;
+&lt;property name=&quot;bir&quot; value=&quot;2012/12/12&quot;/&gt;
+&lt;!--在spring技术栈中日期格式默认yyyy/MM/dd HH:mm:ss--&gt;
+&lt;property name=&quot;price&quot; value=&quot;23.23&quot;/&gt;
+</code></pre>
+<blockquote>
+<p><code>数组类型注入</code></p>
+</blockquote>
+<pre><code class="language-xml">&lt;!--注入数组类型数据--&gt;
+  &lt;property name=&quot;qqs&quot;&gt;
+     &lt;array&gt;
+         &lt;value&gt;xxx&lt;/value&gt;
+         &lt;value&gt;qqq&lt;/value&gt;
+         &lt;value&gt;vvvv&lt;/value&gt;
+      &lt;/array&gt;
+  &lt;/property&gt;
+</code></pre>
+<blockquote>
+<p><code>注入引用类型和集合类型</code></p>
+</blockquote>
+<pre><code class="language-xml">&lt;!--注入引用类型和对象--&gt;
+&lt;property name=&quot;userDAO&quot; ref=&quot;userDAO&quot;/&gt;
+
+&lt;!--注入list集合 list--&gt;
+&lt;property name=&quot;lists&quot;&gt;
+ &lt;list&gt;
+   &lt;value&gt;aaa&lt;/value&gt;
+   &lt;value&gt;bbb&lt;/value&gt;
+   &lt;value&gt;ccc&lt;/value&gt;
+ &lt;/list&gt;
+&lt;/property&gt;
+
+&lt;!--注入map entry--&gt;
+&lt;property name=&quot;maps&quot;&gt;
+ &lt;map&gt;
+   &lt;entry key=&quot;aa&quot; value=&quot;xiaohei&quot;/&gt;
+   &lt;entry key=&quot;bb&quot; value=&quot;xiaoming&quot;/&gt;
+   &lt;entry key=&quot;cc&quot; value=&quot;xiaosan&quot;/&gt;
+ &lt;/map&gt;
+&lt;/property&gt;
+
+&lt;!--注入properties 集合使用props标签--&gt;
+&lt;property name=&quot;props&quot;&gt;
+ &lt;props&gt;
+   &lt;prop key=&quot;url&quot;&gt;jdbc:mysql://localhost:3306/test&lt;/prop&gt;
+   &lt;prop key=&quot;driver&quot;&gt;com.mysql.jdbc.Driver&lt;/prop&gt;
+   &lt;prop key=&quot;username&quot;&gt;hr&lt;/prop&gt;
+   &lt;prop key=&quot;password&quot;&gt;hr&lt;/prop&gt;
+ &lt;/props&gt;
+&lt;/property&gt;
+</code></pre>
+<blockquote>
+<p><code>**注意**: 引用类型使用ref属性注入,基本类型使用value属性注入</code></p>
+</blockquote>
+<hr>
+<h2 id="6构造注入">6.构造注入</h2>
+<p>1.定义：使用类中构造方法为类中成员变量赋值的过程</p>
+<p>2.语法：<br>
+1.需要哪个组件属性将谁声明为成员变量，并提供公开的构造方法<br>
+2.在配置文件中对应的组件标签内部使用<constructor-arg>标签进行注入</p>
+<pre><code class="language-xml">&lt;!--管理DAO组件
+    1. SET方式注入 注入时使用property标签
+    2. 构造方法注入 注入时使用&lt;constructor-arg&gt;标签
+    --&gt;
+&lt;bean class=&quot;cdi.EmpDAOImpl&quot; id=&quot;empDAO&quot;&gt;
+  &lt;!-- 使用构造注入 --&gt;
+	&lt;constructor-arg index=&quot;0&quot; name=&quot;id&quot; value=&quot;1&quot;/&gt;
+	&lt;constructor-arg index=&quot;1&quot; name=&quot;name&quot; value=&quot;xiaohei&quot;/&gt;
+	&lt;constructor-arg index=&quot;2&quot; name=&quot;age&quot; value=&quot;12&quot;/&gt;
+	
+  &lt;!-- 注入数组 --&gt;
+  &lt;constructor-arg index=&quot;3&quot; name=&quot;qqs&quot;&gt;
+    &lt;array&gt;
+      &lt;value&gt;xxx&lt;/value&gt;
+      &lt;value&gt;222&lt;/value&gt;
+      &lt;value&gt;333&lt;/value&gt;
+    &lt;/array&gt;
+	&lt;/constructor-arg&gt;
+
+  &lt;!-- 注入list --&gt;
+  &lt;constructor-arg index=&quot;4&quot; name=&quot;habbys&quot;&gt;
+    &lt;list&gt;
+      &lt;value&gt;haoren&lt;/value&gt;
+      &lt;value&gt;huairen&lt;/value&gt;
+      &lt;value&gt;xiaodoudou&lt;/value&gt;
+    &lt;/list&gt;
+	&lt;/constructor-arg&gt;
+&lt;/bean&gt;
+</code></pre>
+<blockquote>
+<p><code>注意:构造注入并不常用,不过在一些框架类中必须使用构造注入,这里先了解其注入语法即可。</code></p>
+</blockquote>
+<h2 id="7自动注入">7.自动注入</h2>
+<p>1.自动注入【了解】<br>
+在spring工厂配置文件中通过制定自动注入的方式开启组件属性的自动赋值</p>
+<p>注意：<br>
+1. 底层使用原理也是SET方式注入<br>
+2. 自动注入需要在对应组件标签开启才能使用<br>
+3. 只能用于引用类型的注入|对象类型|组件类型的注入</p>
+<p>2.自动注入语法<br>
+1.需要哪个组件属性将谁声明为成员变量，并提供公开的构造方法<br>
+2.在对应的组件标签上加入autowired属性并制定自动注入方式即可完成注入</p>
+<p>3.注入示例</p>
+<pre><code class="language-xml">  &lt;!-- 管理DAO组件 --&gt;
+  &lt;bean CLASS= &quot;adi.StudentDAOImpl&quot; id=&quot;studentDAO&quot;/&gt;
+  &lt;bean CLASS= &quot;adi.StudentDAONewImpl&quot; id=&quot;studentNewDAO&quot;/&gt;
+
+  &lt;!-- 管理Service组件 --&gt;
+    autowise：用来给组件中成员变量完成自动赋值操作
+      byType：根据类型完成自动注入，根据成员变量类型去工厂中找，找到对应类型完成赋值，找不到不赋值
+      byName：根据名称完成自动注入，根据成员变量名字去工厂中获取与之一致的名字，找到对应类型完成赋值，找不到不赋值
+</code></pre>
+<blockquote>
+<ul>
+<li><strong>autowire=”byName”</strong></li>
+</ul>
+<blockquote>
+<p><code>根据注入的属性名与配置文件中bean的id匹配,一致则注入,不一致报错</code></p>
+</blockquote>
+<ul>
+<li><strong>autowire=”byType”</strong></li>
+</ul>
+<blockquote>
+<p><code>根据注入的属性类型,与配置文件中的类型匹配,类型一致注入(在多个实现类时,会产生歧义)</code></p>
+</blockquote>
+<p><code>注意: 无论使用以上那种方式注入都需要为属性提供set方法</code></p>
+</blockquote>
+<hr>
+<h2 id="8bean的创建模式">8.bean的创建模式</h2>
+<p>spring中工厂创建对象的模式：工厂默认在管理对象都是单例方式，无论在工程获取多少次始终获取的是同一个对象</p>
+<p><strong>singleton:单例 默认</strong><br>
+service dao 单例形式管理</p>
+<pre><code> 	 在工厂中`全局唯一,只创建一次` 
+</code></pre>
+<p><strong>prototype: 多例</strong><br>
+struts2 action 必须以多例形式管理</p>
+<pre><code>	 `全局不唯一,每次使用都会创建一个新的对象`
+</code></pre>
+<pre><code class="language-java">&lt;!-- 管理DAO组件
+     scope：用来指定工程创建对象的模式
+                 默认值： singleton   单例
+                         prototype   多例
+ --&gt;
+&lt;bean id=&quot;tagDAO&quot; class=&quot;scope.TagDAOImpl&quot; scope=&quot;prototype&quot;&gt;&lt;/bean&gt;
+		service,dao    -----&gt;  singleton
+		struts2 action -----&gt;  prototype
+</code></pre>
+<blockquote>
+<p><code>注意:在项目开发中service,dao组件单例,struts2的Action必须为:多例</code></p>
+</blockquote>
+<hr>
+<h2 id="9bean的生产原理">9.bean的生产原理</h2>
+<blockquote>
+<p><code>原理</code>:   <code>反射+构造方法</code></p>
+</blockquote>
+<pre><code class="language-java"> UserDAOImpl userDAO = (UserDAOImpl) Class.forName(&quot;com.baizhi.dao.UserDAOImpl&quot;).newInstance();
+ System.out.println(userDAO);
+</code></pre>
+<hr>
+<h2 id="10bean的生命周期">10.bean的生命周期</h2>
+<blockquote>
+<ul>
+<li>
+<p><code>何时创建</code></p>
+<p>随着工厂启动, <strong><code>所有单例bean随之创建 非单例的bean,每次使用时创建</code></strong></p>
+</li>
+<li>
+<p><code>何时销毁</code></p>
+<p>工厂**<code>关闭,所有bean随之销毁</code>** (  注意:  <code>spring对多例bean管理松散,不会负责多例bean的销毁</code>)</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="11bean工厂创建对象的好处">11.bean工厂创建对象的好处</h2>
+<blockquote>
+<ol>
+<li><code>使用配置文件管理java类,再生产环境中更换类的实现时不需要重新部署,修改文件即可</code></li>
+<li><code>spring默认使用单例的模式创建bean,减少内存的占用</code></li>
+<li><code>通过依赖注入建立了类与类之间的关系(使java之间关系更为清晰,方便了维护与管理)</code></li>
+</ol>
+</blockquote>
+]]></content>
+    </entry>
+</feed>

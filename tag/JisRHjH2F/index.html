@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="Gridea静态个人博客">
+<meta name="description" content="wilde的博客">
+<meta name="theme-color" content="#000">
+<title>wilde的博客</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1617512638900">
+<link rel="stylesheet" href="/media/css/gemini.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/Atom-One-Dark-Reasonable.css"
+  rel="stylesheet">
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="gemini">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>wilde的博客</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">仰望星空，脚踏实地</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-home"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives/" target="_self">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags/" target="_self">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/about/" target="_self">
+                  <i class="fa fa-user"></i> 关于
+                </a>
+              
+            </li>
+          
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout  gemini">
+      <div class="section-layout-wrapper">
+        <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">wilde</p>
+    
+    <div class="site-description right-motion">
+      
+      
+      
+        <p>一个热爱技术的student</p>
+      
+      
+    </div>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-name language" data-lan="category">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">1</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+  
+  
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        
+          
+            <a href="https://github.com/wilde3">
+              <i class="fa fa-github-alt" title="github"></i>
+            </a>
+          
+        
+        
+      </div>
+    </div>
+  
+
+
+
+  <div style="width: 100%; position: relative;">
+    <canvas id="canvasDiyBlock" style="width:100%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+    <script src="/media/js/magic/clock.js"></script>
+  </div>
+
+</div>
+</div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'gemini';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
+        <div class="section-box tag-line box-shadow-wrapper">
+          <section class="section tags-section posts-expand bg-color">
+            <div class="padding-wrapper">
+  <div class="tag-timeline-box">
+    <div class="tag-timeline-wrapper">
+      <div class="tag-timeline-title">
+        <h2>
+          Spring
+          <small class="language" data-lan="tag">标签</small>
+        </h2>
+      </div>
+      
+      
+      
+      <a href="https://wilde3.github.io/post/Spring/">
+        <div class="motion-warpper">
+          <div class="tag-post-node">
+            <h1>
+              04-04 12:37:48
+              <small>Spring01基础知识</small>
+            </h1>
+          </div>
+        </div>
+      </a>
+      
+      
+      
+      
+      
+    </div>
+  </div>
+</div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a
+        href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
+    </div>
+    <div class="poweredby">
+      
+    </div>
+  </footer>
+  
+  
+  <div class="gemini back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
+  
+  
+  
+  <div class="bg-img">
+    <img src="/media/images/1.jpg" />
+  </div>
+  
+  
+  
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+    back2TopText = document.querySelector('#back_to_top_text'),
+    drawerBox = document.querySelector('#drawer_box'),
+    rightSideBar = document.querySelector('.sidebar'),
+    viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener('scroll', function (e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+
+  let hasCacu = false;
+  window.onresize = function () {
+    calcuHeight();
+  }
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            window.Velocity(rightMotions, transitionDir, {});
+          }
+        })
+        window.Velocity(viewport, openProp, {
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 链接跳转
+  let newWindow = 'true'
+  if (newWindow === 'true') {
+    let links = document.querySelectorAll('.post-body a')
+    links.forEach(item => {
+      if (!item.classList.contains('btn')) {
+        item.setAttribute("target", "_blank");
+      }
+    })
+  }
+
+  let faSearch = document.querySelector('#fa_search');
+  faSearch.addEventListener('click', function () {
+    document.querySelector('#search_mask').style = ''
+  })
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+  
+  // 离开当前页title变化
+  var leaveTitle = "";
+  if (leaveTitle) {
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState == 'hidden') {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
+
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script>
+  let images = document.querySelectorAll('.section img');
+  console.log(images);
+  images.forEach(image => {
+    var parent = image.parentElement;
+    var next = image.nextElementSibling;
+    parent.removeChild(image);
+    var aelem = document.createElement('a');
+    aelem.href = image.src;
+    aelem.dataset['fancybox'] = 'images';
+    aelem.dataset['rel'] = 'fancybox-button';
+    aelem.classList.add('fancybox');
+    aelem.appendChild(image);
+    parent.insertBefore(aelem, next);
+  })
+</script>
+  </div>
+</body>
+
+<div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://wilde3.github.io/post/Spring/"" data-c="
+          &lt;h2 id=&#34;1-spring框架的引言&#34;&gt;1. Spring框架的引言&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;spring&lt;/code&gt;(春天),生于在2002年,由&lt;code&gt;Rod Johnson&lt;/code&gt;创作。Spring框架是一个集众多设计模式于一身的&lt;code&gt;开源的&lt;/code&gt;、&lt;code&gt;轻量级&lt;/code&gt;的&lt;code&gt;项目管理&lt;/code&gt;框架。致力于JAVAEE轻量级解决方案。相对于原来学过的框架而言,spring框架和之前学习的struts2 、 mybatis 框架有了本质的区别,不是替换原来的某个框架,而是对其进行&lt;code&gt;整合管理&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;轻量级解决方案&lt;/code&gt;:提供一个以简单的、统一的、高效的方式构造整个应用，并且可以将单层框架以最佳的组合揉和在一起建立一个连贯的体系。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2spring框架的核心作用&#34;&gt;2.Spring框架的核心作用&lt;/h2&gt;
+&lt;p&gt;Spring 框架用来&lt;code&gt;管理&lt;/code&gt;&lt;strong&gt;[创建|使用|销毁]&lt;strong&gt;项目中的组件,由于spring 框架可以帮我们生产项目中组件对象,因此也习惯称spring是一个&lt;/strong&gt;工厂|容器&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;组件&lt;/code&gt;:&lt;/strong&gt; 项目中的service,dao,action,都是项目中的组件&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;注意&lt;/code&gt;:&lt;/strong&gt; spring框架通常&lt;strong&gt;不管理对实体类对象创建&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3第一个环境搭建&#34;&gt;3.第一个环境搭建&lt;/h2&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/wilde3/Image-Hosting@master/blog-gridea/Spring/1%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;步骤：&lt;br&gt;
+新建一个模块，maven，选择webapp，取名为spring——day1。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;a. 引入依赖&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在xml文件中引入依赖&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;	&amp;lt;dependency&amp;gt;
+      &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;spring-core&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;4.3.2.RELEASE&amp;lt;/version&amp;gt;
+  &amp;lt;/dependency&amp;gt;
+  &amp;lt;dependency&amp;gt;
+      &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;spring-beans&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;4.3.2.RELEASE&amp;lt;/version&amp;gt;
+  &amp;lt;/dependency&amp;gt;
+  &amp;lt;dependency&amp;gt;
+      &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;spring-web&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;4.3.2.RELEASE&amp;lt;/version&amp;gt;
+  &amp;lt;/dependency&amp;gt;
+  &amp;lt;dependency&amp;gt;
+      &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;spring-expression&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;4.3.2.RELEASE&amp;lt;/version&amp;gt;
+  &amp;lt;/dependency&amp;gt;
+  &amp;lt;dependency&amp;gt;
+      &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;spring-aop&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;4.3.2.RELEASE&amp;lt;/version&amp;gt;
+  &amp;lt;/dependency&amp;gt;
+  &amp;lt;dependency&amp;gt;
+      &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;spring-context&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;4.3.2.RELEASE&amp;lt;/version&amp;gt;
+  &amp;lt;/dependency&amp;gt;
+  &amp;lt;dependency&amp;gt;
+      &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;spring-context-support&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;4.3.2.RELEASE&amp;lt;/version&amp;gt;
+  &amp;lt;/dependency&amp;gt;
+  &amp;lt;dependency&amp;gt;
+      &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;spring-aspects&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;4.3.2.RELEASE&amp;lt;/version&amp;gt;
+  &amp;lt;/dependency&amp;gt;
+  &amp;lt;dependency&amp;gt;
+      &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;spring-jdbc&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;4.3.2.RELEASE&amp;lt;/version&amp;gt;
+  &amp;lt;/dependency&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;b. 引入配置文件&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;# 配置文件名称: 任意名称 
+# 配置文件位置: 项目中根下任意位置
+# 配置文件的内容:
+
+​```java
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+    &amp;lt;beans xmlns=&amp;quot;http://www.springframework.org/schema/beans&amp;quot;
+           xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+           xsi:schemaLocation=&amp;quot;http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd &amp;quot;&amp;gt;
+    &amp;lt;/beans&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;c.创建组件&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;新建directory——java，java目录下新建接口UserDAO.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public interface UserDAO {
+    void save(String name);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;新建一个实现类UserDAOImpl实现接口&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class UserDAOImpl implements UserDAO {
+
+    public void save(String name) {
+        System.out.println(&amp;quot;name = &amp;quot; + name);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;d.工厂管理&lt;/code&gt;&lt;br&gt;
+在resources目录下也建立一个directory——init，在init目录下新建一个spring配置文件，名为spring.xml&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;beans xmlns=&amp;quot;http://www.springframework.org/schema/beans&amp;quot;
+       xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+       xsi:schemaLocation=&amp;quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&amp;quot;&amp;gt;
+
+
+    &amp;lt;!--通过spring管理组件
+      bean:用来管理组件对象的创建
+      class：用来指定管理组件对象的全限定名 包.类
+      id：用来指定spring框架创建的当前组件对象在spring中唯一标识
+      推荐id写成接口的首字母小写 如：userDAO
+    --&amp;gt;
+  	&amp;lt;!--通过bean标签管理组件对象--&amp;gt;
+     &amp;lt;bean class=&amp;quot;init.UserDAOImpl&amp;quot; id=&amp;quot;aa&amp;quot;&amp;gt;&amp;lt;/bean&amp;gt;
+
+&amp;lt;/beans&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;e.启动工厂&lt;/code&gt;测试&lt;br&gt;
+在main-java-init目录下建立TestSpring的java文件用于测试。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt; public class TestSpring {
+    public static void main(String[] args) {
+        //启动工厂
+        ApplicationContext context = new ClassPathXmlApplicationContext(&amp;quot;init/spring.xml&amp;quot;);
+
+        //获取工程中创建好的对象 参数：获取工厂中指定对应的唯一标识
+
+        UserDAO userDAO = (UserDAO) context.getBean(&amp;quot;aa&amp;quot;);
+
+        userDAO.save(&amp;quot;xiaochen&amp;quot;);
+
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;若不采用spring，而采用传统方式new对象，则建立的测试为TestUserDAO：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class TestUserDAO{
+    public static void main(String[] args){
+
+        //创建组件对象
+        UserDAOImpl userDAO = new UserDAOImpl();
+        //使用组件对象
+        userDAO.save(&amp;quot;小陈&amp;quot;)；
+        //销毁jvm
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4spring框架中的核心思想&#34;&gt;4.Spring框架中的核心思想&lt;/h2&gt;
+&lt;h4 id=&#34;41-ioc控制反转&#34;&gt;4.1 IOC[控制反转]&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;IOC**(inversion of controll)控制反转&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;# 1.定义
+	将对象的创建由原来(new)的方式转移到配置文件中,交给spring工厂来创建对象
+  将原来手动通过new关键字创建对象的权利交给spring，由spring工厂创建对象过程，当然spring不仅要创建对象还要在创建对象的同时通过DI的方式为组件与组件调用关系
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;DI(dependcy Injection)依赖注入&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;# 1.定义
+	Spring不仅要创建对象,还要建立类与类之间的关系,因此在控制反转的基础上又提出了依赖注入的概念。为组件中成员变量完成赋值过程，这个过程就叫做依赖注入。
+# 2.语法
+  两个步骤：
+  1.组件对象中需要哪个组件|谁 将谁声明为成员变量并提供公开的SET方法
+  2.在spring的配置文件中对应的组件标签内使用property标签去完成属性的赋值操作
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DI基本语法：&lt;/p&gt;
+&lt;p&gt;DAO组件：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;    public class DeptDAOImpl implements DeptDAO{
+        @Override
+        public void save(String name){
+            System.out.println(&amp;quot;DAO name:&amp;quot; + name);
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Service组件：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class DeptServiceImpl implements DeptService{
+    //需要DAO组件对象 依赖DAO组件
+    private DeptDAO deptDAO；
+    //公开的SET方法
+    public void setDeptDAO(DeptDAO deptDAO){
+        this.deptDAO = deptDAO;
+    }@Override
+    public void save(String name){
+        System.out.println(&amp;quot;deptService name:&amp;quot; + name);
+        deptDAO.save(name);
+    }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;xml配置文件赋值：&lt;/p&gt;
+&lt;!--管理DAO组件--&gt;
+&lt;p&gt;&lt;bean class=&#34;di.DeptDAOImpl&#34; id=&#34;aa&#34;&gt;&lt;/bean&gt;&lt;/p&gt;
+&lt;!--管理service组件--&gt;
+&lt;p&gt;&lt;bean class=&#34;di.DeptServiceImpl&#34; id=&#34;deptService&#34;&gt;&lt;/bean&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!--依赖的注入
+    property：用来给组件中的属性进行赋值操作
+    name：用来指定给组件中那个属性名进行赋值
+    ref：用来指定赋值对象在工厂中唯一标识 bean的id
+--&amp;gt;
+&amp;lt;property name=&amp;quot;deptDAO&amp;quot; ref=&amp;quot;aa&amp;quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/bean&gt;
+&lt;p&gt;启动工程测试：&lt;br&gt;
+ApplicationContext context = new ClassPathXmlApplicationContext(&amp;quot;di/spring.xml&amp;quot;);&lt;br&gt;
+//获取service组件&lt;br&gt;
+DeptService deptService = (DeptService) context.getBean(&amp;quot;deptService&amp;quot;);&lt;br&gt;
+deptService.save(&amp;quot;百知教育&amp;quot;)&lt;/p&gt;
+&lt;h4 id=&#34;42-aop面向切面编程&#34;&gt;4.2 AOP[面向切面编程]&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;AOP&lt;/strong&gt;( Aspect Oriental Programing ) &lt;strong&gt;面向切面的编程&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-set方式注入&#34;&gt;5. SET方式注入&lt;/h2&gt;
+&lt;p&gt;spring中注入方式&lt;/p&gt;
+&lt;p&gt;a.SET注入 使用成员变量SET方式为属性完成赋值的过程      重点&lt;/p&gt;
+&lt;p&gt;b.构造注入 使用构造方法形式进行属性的赋值      了解&lt;/p&gt;
+&lt;p&gt;c.自动注入 就是通过在配置文件中完成类中属性自动赋值     了解&lt;/p&gt;
+&lt;h3 id=&#34;51-八种基本类型string类型-日期类型的注入&#34;&gt;5.1 八种基本类型+String类型 +日期类型的注入&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;基本类型注入&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;property name=&amp;quot;name&amp;quot; value=&amp;quot;zhagnsan&amp;quot;/&amp;gt;
+&amp;lt;property name=&amp;quot;age&amp;quot; value=&amp;quot;21&amp;quot;/&amp;gt;
+&amp;lt;property name=&amp;quot;id&amp;quot; value=&amp;quot;100063&amp;quot;/&amp;gt;
+&amp;lt;property name=&amp;quot;bir&amp;quot; value=&amp;quot;2012/12/12&amp;quot;/&amp;gt;
+&amp;lt;!--在spring技术栈中日期格式默认yyyy/MM/dd HH:mm:ss--&amp;gt;
+&amp;lt;property name=&amp;quot;price&amp;quot; value=&amp;quot;23.23&amp;quot;/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;数组类型注入&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;!--注入数组类型数据--&amp;gt;
+  &amp;lt;property name=&amp;quot;qqs&amp;quot;&amp;gt;
+     &amp;lt;array&amp;gt;
+         &amp;lt;value&amp;gt;xxx&amp;lt;/value&amp;gt;
+         &amp;lt;value&amp;gt;qqq&amp;lt;/value&amp;gt;
+         &amp;lt;value&amp;gt;vvvv&amp;lt;/value&amp;gt;
+      &amp;lt;/array&amp;gt;
+  &amp;lt;/property&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;注入引用类型和集合类型&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;!--注入引用类型和对象--&amp;gt;
+&amp;lt;property name=&amp;quot;userDAO&amp;quot; ref=&amp;quot;userDAO&amp;quot;/&amp;gt;
+
+&amp;lt;!--注入list集合 list--&amp;gt;
+&amp;lt;property name=&amp;quot;lists&amp;quot;&amp;gt;
+ &amp;lt;list&amp;gt;
+   &amp;lt;value&amp;gt;aaa&amp;lt;/value&amp;gt;
+   &amp;lt;value&amp;gt;bbb&amp;lt;/value&amp;gt;
+   &amp;lt;value&amp;gt;ccc&amp;lt;/value&amp;gt;
+ &amp;lt;/list&amp;gt;
+&amp;lt;/property&amp;gt;
+
+&amp;lt;!--注入map entry--&amp;gt;
+&amp;lt;property name=&amp;quot;maps&amp;quot;&amp;gt;
+ &amp;lt;map&amp;gt;
+   &amp;lt;entry key=&amp;quot;aa&amp;quot; value=&amp;quot;xiaohei&amp;quot;/&amp;gt;
+   &amp;lt;entry key=&amp;quot;bb&amp;quot; value=&amp;quot;xiaoming&amp;quot;/&amp;gt;
+   &amp;lt;entry key=&amp;quot;cc&amp;quot; value=&amp;quot;xiaosan&amp;quot;/&amp;gt;
+ &amp;lt;/map&amp;gt;
+&amp;lt;/property&amp;gt;
+
+&amp;lt;!--注入properties 集合使用props标签--&amp;gt;
+&amp;lt;property name=&amp;quot;props&amp;quot;&amp;gt;
+ &amp;lt;props&amp;gt;
+   &amp;lt;prop key=&amp;quot;url&amp;quot;&amp;gt;jdbc:mysql://localhost:3306/test&amp;lt;/prop&amp;gt;
+   &amp;lt;prop key=&amp;quot;driver&amp;quot;&amp;gt;com.mysql.jdbc.Driver&amp;lt;/prop&amp;gt;
+   &amp;lt;prop key=&amp;quot;username&amp;quot;&amp;gt;hr&amp;lt;/prop&amp;gt;
+   &amp;lt;prop key=&amp;quot;password&amp;quot;&amp;gt;hr&amp;lt;/prop&amp;gt;
+ &amp;lt;/props&amp;gt;
+&amp;lt;/property&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;**注意**: 引用类型使用ref属性注入,基本类型使用value属性注入&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6构造注入&#34;&gt;6.构造注入&lt;/h2&gt;
+&lt;p&gt;1.定义：使用类中构造方法为类中成员变量赋值的过程&lt;/p&gt;
+&lt;p&gt;2.语法：&lt;br&gt;
+1.需要哪个组件属性将谁声明为成员变量，并提供公开的构造方法&lt;br&gt;
+2.在配置文件中对应的组件标签内部使用&lt;constructor-arg&gt;标签进行注入&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;!--管理DAO组件
+    1. SET方式注入 注入时使用property标签
+    2. 构造方法注入 注入时使用&amp;lt;constructor-arg&amp;gt;标签
+    --&amp;gt;
+&amp;lt;bean class=&amp;quot;cdi.EmpDAOImpl&amp;quot; id=&amp;quot;empDAO&amp;quot;&amp;gt;
+  &amp;lt;!-- 使用构造注入 --&amp;gt;
+	&amp;lt;constructor-arg index=&amp;quot;0&amp;quot; name=&amp;quot;id&amp;quot; value=&amp;quot;1&amp;quot;/&amp;gt;
+	&amp;lt;constructor-arg index=&amp;quot;1&amp;quot; name=&amp;quot;name&amp;quot; value=&amp;quot;xiaohei&amp;quot;/&amp;gt;
+	&amp;lt;constructor-arg index=&amp;quot;2&amp;quot; name=&amp;quot;age&amp;quot; value=&amp;quot;12&amp;quot;/&amp;gt;
+	
+  &amp;lt;!-- 注入数组 --&amp;gt;
+  &amp;lt;constructor-arg index=&amp;quot;3&amp;quot; name=&amp;quot;qqs&amp;quot;&amp;gt;
+    &amp;lt;array&amp;gt;
+      &amp;lt;value&amp;gt;xxx&amp;lt;/value&amp;gt;
+      &amp;lt;value&amp;gt;222&amp;lt;/value&amp;gt;
+      &amp;lt;value&amp;gt;333&amp;lt;/value&amp;gt;
+    &amp;lt;/array&amp;gt;
+	&amp;lt;/constructor-arg&amp;gt;
+
+  &amp;lt;!-- 注入list --&amp;gt;
+  &amp;lt;constructor-arg index=&amp;quot;4&amp;quot; name=&amp;quot;habbys&amp;quot;&amp;gt;
+    &amp;lt;list&amp;gt;
+      &amp;lt;value&amp;gt;haoren&amp;lt;/value&amp;gt;
+      &amp;lt;value&amp;gt;huairen&amp;lt;/value&amp;gt;
+      &amp;lt;value&amp;gt;xiaodoudou&amp;lt;/value&amp;gt;
+    &amp;lt;/list&amp;gt;
+	&amp;lt;/constructor-arg&amp;gt;
+&amp;lt;/bean&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;注意:构造注入并不常用,不过在一些框架类中必须使用构造注入,这里先了解其注入语法即可。&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;7自动注入&#34;&gt;7.自动注入&lt;/h2&gt;
+&lt;p&gt;1.自动注入【了解】&lt;br&gt;
+在spring工厂配置文件中通过制定自动注入的方式开启组件属性的自动赋值&lt;/p&gt;
+&lt;p&gt;注意：&lt;br&gt;
+1. 底层使用原理也是SET方式注入&lt;br&gt;
+2. 自动注入需要在对应组件标签开启才能使用&lt;br&gt;
+3. 只能用于引用类型的注入|对象类型|组件类型的注入&lt;/p&gt;
+&lt;p&gt;2.自动注入语法&lt;br&gt;
+1.需要哪个组件属性将谁声明为成员变量，并提供公开的构造方法&lt;br&gt;
+2.在对应的组件标签上加入autowired属性并制定自动注入方式即可完成注入&lt;/p&gt;
+&lt;p&gt;3.注入示例&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;  &amp;lt;!-- 管理DAO组件 --&amp;gt;
+  &amp;lt;bean CLASS= &amp;quot;adi.StudentDAOImpl&amp;quot; id=&amp;quot;studentDAO&amp;quot;/&amp;gt;
+  &amp;lt;bean CLASS= &amp;quot;adi.StudentDAONewImpl&amp;quot; id=&amp;quot;studentNewDAO&amp;quot;/&amp;gt;
+
+  &amp;lt;!-- 管理Service组件 --&amp;gt;
+    autowise：用来给组件中成员变量完成自动赋值操作
+      byType：根据类型完成自动注入，根据成员变量类型去工厂中找，找到对应类型完成赋值，找不到不赋值
+      byName：根据名称完成自动注入，根据成员变量名字去工厂中获取与之一致的名字，找到对应类型完成赋值，找不到不赋值
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;autowire=”byName”&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;根据注入的属性名与配置文件中bean的id匹配,一致则注入,不一致报错&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;autowire=”byType”&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;根据注入的属性类型,与配置文件中的类型匹配,类型一致注入(在多个实现类时,会产生歧义)&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;注意: 无论使用以上那种方式注入都需要为属性提供set方法&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;8bean的创建模式&#34;&gt;8.bean的创建模式&lt;/h2&gt;
+&lt;p&gt;spring中工厂创建对象的模式：工厂默认在管理对象都是单例方式，无论在工程获取多少次始终获取的是同一个对象&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;singleton:单例 默认&lt;/strong&gt;&lt;br&gt;
+service dao 单例形式管理&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; 	 在工厂中`全局唯一,只创建一次` 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;prototype: 多例&lt;/strong&gt;&lt;br&gt;
+struts2 action 必须以多例形式管理&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;	 `全局不唯一,每次使用都会创建一个新的对象`
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;&amp;lt;!-- 管理DAO组件
+     scope：用来指定工程创建对象的模式
+                 默认值： singleton   单例
+                         prototype   多例
+ --&amp;gt;
+&amp;lt;bean id=&amp;quot;tagDAO&amp;quot; class=&amp;quot;scope.TagDAOImpl&amp;quot; scope=&amp;quot;prototype&amp;quot;&amp;gt;&amp;lt;/bean&amp;gt;
+		service,dao    -----&amp;gt;  singleton
+		struts2 action -----&amp;gt;  prototype
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;注意:在项目开发中service,dao组件单例,struts2的Action必须为:多例&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;9bean的生产原理&#34;&gt;9.bean的生产原理&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;原理&lt;/code&gt;:   &lt;code&gt;反射+构造方法&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt; UserDAOImpl userDAO = (UserDAOImpl) Class.forName(&amp;quot;com.baizhi.dao.UserDAOImpl&amp;quot;).newInstance();
+ System.out.println(userDAO);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;10bean的生命周期&#34;&gt;10.bean的生命周期&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;何时创建&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;随着工厂启动, &lt;strong&gt;&lt;code&gt;所有单例bean随之创建 非单例的bean,每次使用时创建&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;何时销毁&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;工厂**&lt;code&gt;关闭,所有bean随之销毁&lt;/code&gt;** (  注意:  &lt;code&gt;spring对多例bean管理松散,不会负责多例bean的销毁&lt;/code&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;11bean工厂创建对象的好处&#34;&gt;11.bean工厂创建对象的好处&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;使用配置文件管理java类,再生产环境中更换类的实现时不需要重新部署,修改文件即可&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;spring默认使用单例的模式创建bean,减少内存的占用&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;通过依赖注入建立了类与类之间的关系(使java之间关系更为清晰,方便了维护与管理)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+">Spring01基础知识</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://wilde3.github.io/post/about/"" data-c="
+          &lt;blockquote&gt;
+&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
+&lt;h2 id=&#34;博主是谁&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;
+&lt;h2 id=&#34;兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
+&lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
+">关于</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
+
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
+
+<input hidden id="copy" />
+<script>
+  !function () {
+    let times = document.querySelectorAll('.publish-time');
+    for (let i = 0; i < times.length; i++) {
+      let date = times[i].dataset.t;
+      let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+      if (time < 60) {
+        str = time + '秒之前';
+      } else if (time < 3600) {
+        str = Math.floor(time / 60) + '分钟之前';
+      } else if (time >= 3600 && time < 86400) {
+        str = Math.floor(time / 3600) + '小时之前';
+      } else if (time >= 86400 && time < 259200) {
+        str = Math.floor(time / 86400) + '天之前';
+      } else {
+        str = times[i].textContent;
+      }
+      times[i].textContent = str;
+    }
+  }();
+</script>
+
+<script>
+  let language = '';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
+  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+
+</script>
+<script src="/media/js/motion.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 200
+  });
+</script>
+
+
+<script src="/media/js/mouse/love.js"></script>
+
+
+
+
+
+</html>
